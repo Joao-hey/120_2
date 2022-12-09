@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
-<a href="">
-    <div>
-    <h1>adiawpidpm</h1>
-    </div>
-    <div>
+<a href="modification.php">
+    <div class="linkbody">
+        <div class="top">
+            
+        </div>
+        <div class="bottom">
 
+        </div>
     </div>
 </a>
