@@ -17,7 +17,7 @@ class Pagebuilder
     </head>
     <body>
         
-        <div class=\"main\">
+        
         
         ";
         
@@ -25,7 +25,7 @@ class Pagebuilder
         
         echo
         "
-        </div>
+        
     <footer>
         
     </footer>
