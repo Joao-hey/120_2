@@ -5,6 +5,7 @@
     --yellow: #FFED00;
     --blue: #28348B;
     --black: #111111;
+    border: black 0cm solid;
     border: var(--red) solid 1px;
     margin: 0px;
     padding: 0px;

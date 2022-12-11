@@ -1,13 +1,12 @@
-button{
+button, .linkbody{
+    padding: 0px;
+    margin: 0px;
     height: 100%;
     width: 100%;
     
 }
 
 .linkbody{
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
     background: var(--lightPink);
 }
 
@@ -17,9 +16,11 @@ button{
 
 .top{
     height: 30%;
+    background-color: var(--blue);
 }
 
 .bottom{
     height: 70%;
-    background-image: ;
+    background-image: url("Image/train.png");
+    background-size: cover;
 }

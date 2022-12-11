@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="../View/Styles/modificationStyles.css">
+
+
 <div class="body">
     <div class="left">
         <div class="stationFrom">

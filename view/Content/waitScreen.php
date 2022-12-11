@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
+<link rel="stylesheet" href="../model/Styles/waitScreenStyles.css">
+
 <button>
     <div class="linkbody">
 
@@ -15,7 +17,6 @@
         </div>
 
         <div class="bottom">
-            
         </div>
     </div>
 </button>
