@@ -1,25 +1,34 @@
+<link rel="stylesheet" href="../View/Styles/modificationStyles.css">
 <div class="body">
     <div class="left">
-        <div>
+        <div class="stationFrom">
+            <button class="continue">
+                asss
+            </button><button class="continue">
+                asss
+            </button>
+        </div>
+
+        <div class="routeImage">
 
         </div>
 
-        <div>
-            
-        </div>
-
-        <div>
-
+        <div class="stationTo">
+            <button class="continue">
+                asss
+            </button><button class="continue">
+                asss
+            </button>
         </div>
     </div>
 
     <div class="right">
-        <div>
+        <div class="ticketType">
 
         </div>
-        
-        <button>
 
+        <button class="continue">
+            asss
         </button>
     </div>
 </div>

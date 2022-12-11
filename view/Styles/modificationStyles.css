@@ -1,0 +1,18 @@
+.body{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left, .right{
+    width: 40%;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+}
+
+.stationFrom, .stationTo{
+    display: flex;
+    flex-direction: column;
+}

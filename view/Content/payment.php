@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
 <div class="body">
     <div class="left">
         <p></p>

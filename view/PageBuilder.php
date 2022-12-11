@@ -25,10 +25,6 @@ class Pagebuilder
         
         echo
         "
-        
-    <footer>
-        
-    </footer>
     </body>
     
     </html>
