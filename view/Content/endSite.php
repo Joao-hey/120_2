@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
+<link rel="stylesheet" href="../../View/Styles/waitScreenStyles.css">

@@ -3,5 +3,5 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-require_once "../View/Pagebuilder.php";
+require_once "../../View/Pagebuilder.php";
     Pagebuilder::pagebuild("Payment", "payment");

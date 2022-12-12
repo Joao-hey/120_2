@@ -24,3 +24,7 @@ button, .linkbody{
     background-image: url("Image/train.png");
     background-size: cover;
 }
+
+button:hover{
+    cursor: pointer;
+}

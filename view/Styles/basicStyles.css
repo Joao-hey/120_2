@@ -5,15 +5,26 @@
     --yellow: #FFED00;
     --blue: #28348B;
     --black: #111111;
+
+    --text: 1.35em; 
+
     border: black 0cm solid;
     border: var(--red) solid 1px;
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
+    
 }
-
+@font-face {
+    font-family: GraviolaMedium;
+    src: url("Font/Harbor Type - Graviola-Medium.otf");
+}
 
 .main, html, body{
     color: var(--black);
+    font-family: GraviolaMedium;
     width: 100%;
     height: 100%;
+    font-size: var(--text);
 }
+

@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
-<link rel="stylesheet" href="../model/Styles/waitScreenStyles.css">
+<link rel="stylesheet" href="../../View/Styles/waitScreenStyles.css">
 
-<button>
+<button id="stopWaitScreen">
     <div class="linkbody">
 
         <div class="top">
@@ -20,3 +19,5 @@
         </div>
     </div>
 </button>
+
+<script src="../../Controller/siteScripts/waitScreen.js"></script>

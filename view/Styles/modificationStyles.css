@@ -1,18 +1,81 @@
 .body{
     display: flex;
     justify-content: space-around;
+    height: 100%;
+    background-color: var(--lightPink);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+button{
+    width: 6em;
+    height: 2.3em;
+    font-size: 1.1em;
 }
 
 .left, .right{
-    width: 40%;
+    height: 70%;
+    margin-bottom: 5%;
 }
 
 .left{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
 }
 
 .stationFrom, .stationTo{
+    width: 30%;
+}
+
+.routeImage{
+    width: 35%;
+}
+
+.stationFromText, .stationToText{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.6em;
+}
+
+.stationFromText label, .stationToText label{
+    padding-right: 5%;
+}
+
+.stationFromButtons, .stationToButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stationFromButtons button, .stationToButtons button{
+    margin-top: 5%;
+}
+
+
+.right{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.ticketType{
+    width: 60%;
+    height: 75%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
+
+.continue{
+    margin-top: 5%;
 }

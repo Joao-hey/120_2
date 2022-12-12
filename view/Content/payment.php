@@ -1,39 +1,61 @@
-<link rel="stylesheet" href="../View/Styles/waitScreenStyles.css">
+<link rel="stylesheet" href="../../View/Styles/paymentStyles.css">
+
 <div class="body">
     <div class="left">
-        <p></p>
-        <p></p>
-        <button></button>
+
+        <div class="stationFromText">
+            <label for="From">From</label>
+            <p id="From"></p>
+        </div>
+
+        <div class="stationToText">
+            <label for="To">To</label>
+            <p id="To"></p>
+        </div>
+
+        <button>Ändern</button>
     </div>
 
     <div class="middle">
         <div class="ticketTyp">
-            <button></button>
-            <button></button>
-            <button></button>
+            <p>Ticket Art: </p>
+            <div>
+                <button>Ein Weg</button>
+                <button>Zwei Weg</button>
+                <button>Mehrfahrt</button>
+            </div>
         </div>
 
         <div class="taxType">
-            <button></button>
-            <button></button>
+            <p>Halbtax/Vollpreis Wahl: </p>
+            <div>
+                <button>Vollpreis</button>
+                <button>Halbtax</button>
+            </div>
         </div>
 
-        <div>
+        <div class="classAndNr">
             <div class="class">
-                <button></button>
-                <button></button>
+                <p>Klasse: </p>
+                <div>
+                    <button>1</button>
+                    <button>2</button>
+                </div>
             </div>
 
             <div class="number">
-                <button></button>
-                <p></p>
-                <button></button>
+                <p>Anzahl: </p>
+                <div>
+                    <button>-</button>
+                    <p>0</p>
+                    <button>+</button>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="right">
-        <p></p>
+        <p>Preis</p>
         <p></p>
         <p></p>
         <p></p>
