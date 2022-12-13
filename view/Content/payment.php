@@ -61,3 +61,9 @@
         <p></p>
     </div>
 </div>
+
+<?php
+require_once "footer.php";
+?>
+
+<script src="../../Controller/siteScripts/payment.js"></script>

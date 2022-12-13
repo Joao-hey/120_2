@@ -54,9 +54,7 @@
 </div>
 
 <?php
-
 require_once "footer.php";
-
 ?>
 
 <script src="../../Controller/siteScripts/modification.js"></script>
