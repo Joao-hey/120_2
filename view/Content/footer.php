@@ -1,4 +1,5 @@
 <footer>
+    <link rel="stylesheet" href="../../View/Styles/footer.css">
     <div class="leftFooterButton">
 
     </div>

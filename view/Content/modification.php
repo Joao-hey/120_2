@@ -7,13 +7,15 @@
                 <label for="From">From</label>
                 <p id="From"></p>
             </div>
+
             <div id="stationToButtons" class="stationToButtons">
-                
+
             </div>
+
         </div>
 
         <div class="routeImage">
-
+            
         </div>
 
         <div class="stationTo">
@@ -23,14 +25,12 @@
             </div>
 
             <div id="stationFromButtons" class="stationFromButtons">
-                
 
             </div>
         </div>
     </div>
 
     <div class="right">
-
 
         <div class="ticketType">
             <p>Ticket Art</p>
@@ -47,11 +47,16 @@
             </button>
         </div>
 
-
         <button id="continue" class="continue">
             Weiter
         </button>
     </div>
 </div>
+
+<?php
+
+require_once "footer.php";
+
+?>
 
 <script src="../../Controller/siteScripts/modification.js"></script>

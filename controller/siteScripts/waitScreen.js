@@ -1,6 +1,5 @@
 class waitScreen {
     static initialize() {
-        console.log("nsnfjise");
         waitScreen.instance = new waitScreen();
         
     }
