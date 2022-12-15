@@ -22,13 +22,13 @@
     </div>
 
     <div class="middle">
-        
+
 
         <div class="taxType">
             <p>Halbtax/Vollpreis Wahl: </p>
             <div>
-                <button>Vollpreis</button>
-                <button>Halbtax</button>
+                <button id="fullPrice">Vollpreis</button>
+                <button id="halfPrice">Halbtax</button>
             </div>
         </div>
 
@@ -36,17 +36,17 @@
             <div class="class">
                 <p>Klasse: </p>
                 <div>
-                    <button>1</button>
-                    <button>2</button>
+                    <button id="class1">1</button>
+                    <button id="class2">2</button>
                 </div>
             </div>
 
             <div class="number">
                 <p>Anzahl: </p>
                 <div>
-                    <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
+                    <button id="minus">-</button>
+                    <p id="ticketNr">1</p>
+                    <button id="plus">+</button>
                 </div>
             </div>
         </div>
@@ -54,9 +54,13 @@
 
     <div class="right">
         <p>Preis</p>
-        <p></p>
-        <p></p>
-        <p></p>
+        <div class="price">
+            <label for="price">Preis</label>
+            <p id="price"></p>
+
+            <label for="payed">Bezahlt</label>
+            <p id="payed"></p>
+        </div>
     </div>
 </div>
 

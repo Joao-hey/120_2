@@ -90,6 +90,18 @@
     width: 1em;
 }
 
+.number button{
+    background-color: var(--yellow);
+    border-radius: 15px;
+}
+
 .right{
     width: 20%;
+}
+
+.price{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
