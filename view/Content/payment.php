@@ -55,11 +55,15 @@
     <div class="right">
         <p>Preis</p>
         <div class="price">
-            <label for="price">Preis</label>
-            <p id="price"></p>
+            <div>
+                <label for="price">Preis</label>
+                <p id="price">adw</p>
+            </div>
 
-            <label for="payed">Bezahlt</label>
-            <p id="payed"></p>
+            <div>
+                <label for="payed">Bezahlt</label>
+                <p id="payed"></p>
+            </div>
         </div>
     </div>
 </div>

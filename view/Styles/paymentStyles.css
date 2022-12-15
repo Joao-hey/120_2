@@ -105,3 +105,10 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+.price div{
+    display: flex;
+}
+
+.price p{
+    margin-left: 1em;
+}
