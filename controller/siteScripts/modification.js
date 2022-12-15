@@ -34,9 +34,8 @@ class modification {
     }
 
     changeTicketTyp(event) {
-        this.clicked = document.getElementById(event.currentTarget.id);
         this.chosenTicketTyp.classList.remove("chosen");
-        this.chosenTicketTyp = this.clicked;
+        this.chosenTicketTyp = document.getElementById(event.currentTarget.id);
         this.chosenTicketTyp.classList.add("chosen");
         localStorage.setItem("ticketType", event.currentTarget.id);
     }
@@ -82,18 +81,18 @@ class modification {
     }
 
     changeChosenStationFrom(event){
-        this.clicked = document.getElementById(event.currentTarget.id);
-        
         if(this.disableOtherSideTo){
             this.disableOtherSideTo.disabled = false;
         }
+
         this.disableOtherSideTo = document.getElementById(event.currentTarget.innerText + "To");
         this.disableOtherSideTo.disabled = true;
 
         if(this.chosenStationFrom){
             this.chosenStationFrom.classList.remove("chosen");  
         }
-        this.chosenStationFrom = this.clicked;
+
+        this.chosenStationFrom = document.getElementById(event.currentTarget.id);
         this.chosenStationFrom.classList.add("chosen");
         this.stationFromText.innerText = event.currentTarget.innerText;
         localStorage.setItem("chosenStationFrom", event.currentTarget.innerText);
@@ -101,18 +100,18 @@ class modification {
     }
     
     changeChosenStationTo(event){
-        this.clicked = document.getElementById(event.currentTarget.id);
-
         if(this.disableOtherSideFrom){
             this.disableOtherSideFrom.disabled = false;
         }
+
         this.disableOtherSideFrom = document.getElementById(event.currentTarget.innerText + "From");
         this.disableOtherSideFrom.disabled = true;
 
         if(this.chosenStationTo){
             this.chosenStationTo.classList.remove("chosen");
         }
-        this.chosenStationTo = this.clicked;
+
+        this.chosenStationTo = document.getElementById(event.currentTarget.id);
         this.chosenStationTo.classList.add("chosen");
         this.stationToText.innerText = event.currentTarget.innerText;
         localStorage.setItem("chosenStationTo", event.currentTarget.innerText);
@@ -125,6 +124,7 @@ class modification {
             this.ErrorMessage.classList.remove("Error");
             this.ErrorMessage.classList.add("ErrorHidden");
         }
+
     }
     seeIfContinueButton(event){
         if(this.chosenStationTo && this.chosenStationFrom){
@@ -134,8 +134,8 @@ class modification {
             this.continue.disabled = true;
             this.ErrorMessage.classList.remove("ErrorHidden");
             this.ErrorMessage.classList.add("Error");
-        
         }
+        
     }
 
 }

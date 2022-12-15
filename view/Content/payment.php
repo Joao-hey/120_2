@@ -57,12 +57,12 @@
         <div class="price">
             <div>
                 <label for="price">Preis</label>
-                <p id="price">adw</p>
+                <p id="price">0</p>
             </div>
 
             <div>
                 <label for="payed">Bezahlt</label>
-                <p id="payed"></p>
+                <p id="payed">0</p>
             </div>
         </div>
     </div>
