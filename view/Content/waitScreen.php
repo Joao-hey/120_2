@@ -5,13 +5,13 @@
 
         <div class="top">
             <div class="topInfo">
-                <p></p>
-                <p></p>
-                <p></p>
+                <img src="../../View/Styles/Image/Logo (Weiss).png" alt="Logo von CSb">
+                
+                <p>00.00.0000</p>
             </div>
 
             <div class="topMessage">
-
+                <p>Willkommen Welcome Bonjure</p>
             </div>
         </div>
 

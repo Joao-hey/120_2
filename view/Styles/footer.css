@@ -26,11 +26,15 @@ footer button{
     font-size: 1.1em;
 }
 
+.leftFooterButton button{
+    background-color: var(--red);
+}
+
 footer button:active{
     background-color: var(--darkYellow);
 }
 
-.chossen{
+.chosen{
     background-color: var(--yellow);
 }
 

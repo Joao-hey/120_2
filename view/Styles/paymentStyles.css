@@ -21,12 +21,18 @@
 .left{
     height: 40%;
     flex-direction: row;
+    text-align: center;
 }
 
 .left button{
     width: 6em;
     height: 2.5em;
     font-size: 1.1em;
+    margin-top: 5%;
+}
+
+.left div{
+    text-align: left;
 }
 
 .middle{
