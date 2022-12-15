@@ -15,7 +15,7 @@ button{
 
 .left, .right{
     height: 70%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .left{
@@ -26,28 +26,29 @@ button{
 }
 
 .stationFrom, .stationTo{
-    width: 30%;
+    width: 35%;
 }
 
 .routeImage{
-    width: 35%;
+    width: 30%;
 }
 
 .stationFromText, .stationToText{
     display: flex;
     flex-direction: row;
     margin-top: 0.6em;
+    white-space: nowrap;
 }
+
 
 .stationFromText label, .stationToText label{
     padding-right: 5%;
 }
 
 .stationFromButtons, .stationToButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: 79%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .stationFromButtons button, .stationToButtons button{
@@ -74,6 +75,17 @@ button{
     padding-bottom: 2%;
 }
 
+.ErrorHidden{
+    margin-top: 8%;
+    display: none;
+}
+
+.Error{
+    margin-top: 8%;
+}
+
 .continue{
-    margin-top: 5%;
+    margin: 10% 0% 0% 35%;
+    background-color: var(--yellow);
+    border-radius: 15px;
 }

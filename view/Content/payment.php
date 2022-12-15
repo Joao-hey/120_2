@@ -4,27 +4,25 @@
     <div class="left">
 
         <div class="stationFromText">
-            <label for="From">From</label>
-            <p id="From"></p>
+            <label for="from">Von:</label>
+            <p id="from"></p>
         </div>
 
         <div class="stationToText">
-            <label for="To">To</label>
-            <p id="To"></p>
+            <label for="to">Zu:</label>
+            <p id="to"></p>
         </div>
 
-        <button>Ändern</button>
+        <div class="stationToText">
+            <label for="ticketTyp">Tickettyp:</label>
+            <p id="ticketTyp"></p>
+        </div>
+
+        <button id="changeStation">Ändern</button>
     </div>
 
     <div class="middle">
-        <div class="ticketTyp">
-            <p>Ticket Art: </p>
-            <div>
-                <button>Ein Weg</button>
-                <button>Zwei Weg</button>
-                <button>Mehrfahrt</button>
-            </div>
-        </div>
+        
 
         <div class="taxType">
             <p>Halbtax/Vollpreis Wahl: </p>
@@ -47,7 +45,7 @@
                 <p>Anzahl: </p>
                 <div>
                     <button>-</button>
-                    <p>0</p>
+                    <p>1</p>
                     <button>+</button>
                 </div>
             </div>
