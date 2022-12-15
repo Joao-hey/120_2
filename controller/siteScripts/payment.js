@@ -92,7 +92,17 @@ class payment {
     }
 
     //Right
+    caculatePrice(event){
 
+    }
+
+    caculatePayedPrice(event){
+
+    }
+
+    registerPayment(event){
+
+    }
 }
 
 window.addEventListener("load", payment.initialize);
