@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../View/Styles/endSiteStyles.css">
 
-<button id="goBack" class="body">
+<button id="stopEndSite" class="body">
     <div class="textBox">
         <p>Vielen Dank für Ihren Einkauf</p>
         <p>Ticket werden Ausgegeben</p>

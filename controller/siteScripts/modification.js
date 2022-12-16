@@ -5,6 +5,8 @@ class modification {
     }
 
     constructor() {
+        
+
         //Defines all elements on the left div element
         this.stationFromText = document.getElementById("From");
         this.stationToText = document.getElementById("To");
@@ -58,25 +60,29 @@ class modification {
             "Broc-Village"
         ];
 
-
         this.listFrom = document.getElementById("stationFromButtons");
         this.listTo = document.getElementById("stationToButtons");
 
-        for (const element of places) {
-            var entryButton = document.createElement("button");
-            entryButton.innerText = element;
-            entryButton.id = entryButton.innerText + "From";
-
-            this.listFrom.appendChild(entryButton);
-            entryButton.addEventListener("click", this.changeChosenStationFrom.bind(this));
+        //saves the Number of the Corresponding Station in the Localstorage for later use
+        this.stationIndex = 0;
+        for(const element of places){
+            localStorage.setItem(element, this.stationIndex);
+            this.stationIndex++;
         }
+
+        //Creates all Stations on the Left and Right
         for (const element of places) {
             var entryButton = document.createElement("button");
             entryButton.innerText = element;
             entryButton.id = entryButton.innerText + "To";
-
             this.listTo.appendChild(entryButton);
             entryButton.addEventListener("click", this.changeChosenStationTo.bind(this));
+
+            var entryButton = document.createElement("button");
+            entryButton.innerText = element;
+            entryButton.id = entryButton.innerText + "From";
+            this.listFrom.appendChild(entryButton);
+            entryButton.addEventListener("click", this.changeChosenStationFrom.bind(this));
         }
     }
 
@@ -126,6 +132,7 @@ class modification {
         }
 
     }
+
     seeIfContinueButton(event){
         if(this.chosenStationTo && this.chosenStationFrom){
             this.continue.disabled = false;
