@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="../../View/Styles/footer.css">
-    
 
 <footer>
     <div class="leftFooterButton">
-        <button id="Cancel">
+        <button id="cancel">
             Abbrechen
         </button>
     </div>
@@ -26,5 +25,15 @@
         </button>
     </div>
 </footer>
+
+<button id="alertButton" class="alertButton">
+    <div id="blur" class="blur">
+    </div>
+</button>
+<div id="alert" class="alert">
+    <p>Inaktivität erkannt </p>
+    <p>Drücken Sie den Bilscchrim um weiterzuführen</p>
+</div>
+
 
 <script src="../../Controller/siteScripts/footer.js"></script>

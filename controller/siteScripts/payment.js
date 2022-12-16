@@ -58,6 +58,13 @@ class payment {
         localStorage.setItem("payed", 0);
 
         this.caculatePrice();
+
+        //timeout Variabels
+        this.blur = document.getElementById("blur");
+        this.alert = document.getElementById("alert");
+        this.alertButton = document.getElementById("alertButton");
+
+        this.setTimer();
     }
     //Left
     goToModification(event) {
@@ -114,6 +121,7 @@ class payment {
             this.basePrice = this.basePrice * 2;
         }
 
+        this.resetTimer();
         this.price.innerText = this.basePrice.toFixed(2) * localStorage.getItem("amount");
     }
 
@@ -141,14 +149,47 @@ class payment {
         this.minusButton.disabled = true;
         this.plusButton.disabled = true;
 
+        
+        this.resetTimer();
         this.caculatePayedPrice();
     }
 
     caculateDistance(event){
         this.routeStart = localStorage.getItem(this.stationFrom.innerText);
         this.routeEnd = localStorage.getItem(this.stationTo.innerText);
+        
+        
         return this.routDistance = this.routeEnd - this.routeStart;
     }
+
+    
+    //timeout function
+    setTimer(event) {
+        console.log("sfesfsef");
+        //reset of the site
+        this.alertTimeout = setTimeout(() => {
+            this.blur.style.display = "flex";
+            this.alert.style.display = "flex";
+            this.alertButton.style.display = "flex";
+
+            this.alert.addEventListener("click", this.resetTimer.bind(this));
+
+            this.siteRedirect = setTimeout(() => {
+                window.open("waitScreen.php", "_self");
+            }, 60000);
+        }, 60000);
+    }
+
+    resetTimer(event) {
+        this.blur.style.display = "none";
+        this.alert.style.display = "none";
+        this.alertButton.style.display = "none";
+
+        clearTimeout(this.alertTimeout);
+        clearTimeout(this.siteRedirect);
+        this.setTimer();
+    }
+
 }
 
 window.addEventListener("load", payment.initialize);

@@ -11,7 +11,7 @@
             </div>
 
             <div class="topMessage">
-                <p>Willkommen Welcome Bonjure</p>
+                <p>Bildschirm berühren</p>
             </div>
         </div>
 

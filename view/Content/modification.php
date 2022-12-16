@@ -41,15 +41,15 @@
         <div class="ticketType">
             <p>Ticket Art</p>
             <button id="oneWay">
-                Einzel-weg Ticket
+                Einzelbillet
             </button>
 
             <button id="twoWay">
-                Zwei-weg Ticket
+                Retourbillet
             </button>
 
             <button id="multiWay">
-                Mehrfahrt Ticket
+                Mehrfahrtenkarte
             </button>
         </div>
         <button id="continue" class="continue">
