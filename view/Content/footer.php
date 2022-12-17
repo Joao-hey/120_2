@@ -10,19 +10,19 @@
     </div>
 
     <div class="rightFooterButton">
-        <button id="German">
+        <button id="de">
             Deutsch
         </button>
 
-        <button id="English">
+        <button id="en">
             English
         </button>
 
-        <button id="French">
+        <button id="fr">
             Français
         </button>
 
-        <button id="Japanese">
+        <button id="jp">
             やまと
         </button>
     </div>
@@ -34,7 +34,7 @@
 </button>
 <div id="alert" class="alert">
     <p>Inaktivität erkannt </p>
-    <p>Drücken Sie den Bilscchrim um weiterzuführen</p>
+    <p>Drücken Sie den Bildschirm um weiterzuführen</p>
 </div>
 
 

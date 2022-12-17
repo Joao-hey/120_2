@@ -55,7 +55,7 @@
         <button id="continue" class="continue">
             Weiter
         </button>
-        <p id="Error" class="ErrorHidden">Bitte wählen Sie eine Von und Zu Station</p>
+        <p id="Error" class="ErrorHidden">Bitte wählen Sie eine 'Von' und 'Zu' Station</p>
     </div>
 </div>
 

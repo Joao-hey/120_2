@@ -1,7 +1,7 @@
 <?php
 
-$language = "de";
+$languageCode = "de";
 
 if (!empty($_GET["language"])) {
-    $language = $_GET["language"];
+    $languageCode = $_GET["language"];
 }

@@ -1,19 +1,22 @@
 <?php
 
+require_once "../../controller/siteScripts/languageSeter.php";
+require_once "../../controller/siteScripts/languageChanger.php";
+
+
 class Pagebuilder
 {
 
     public static function pagebuild($title = "", $url = "")
     {
+        global $languageCode;
         echo "
     
     <!DOCTYPE html>
-    <html lang=";
-
-        require_once "../../controller/siteScripts/languageSeter.php";
-        require_once "../../controller/siteScripts/languageChanger.php";
-        echo $language;
-        echo ">
+    <html lang=\"";
+        
+        echo $languageCode;
+        echo "\">
     <head>
         <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">

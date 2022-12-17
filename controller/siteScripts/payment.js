@@ -25,10 +25,6 @@ class payment {
         this.fullPrice.addEventListener("click", this.changeTax.bind(this));
         this.halfPrice.addEventListener("click", this.changeTax.bind(this));
 
-        this.chosenTaxTyp = this.fullPrice;
-        this.chosenTaxTyp.classList.add("chosen");
-        localStorage.setItem("taxTyp", this.chosenTaxTyp.id);
-
         ///Middle Bottom
         ////left
         this.class1 = document.getElementById("class1");
@@ -37,10 +33,6 @@ class payment {
         this.class1.addEventListener("click", this.changeClass.bind(this));
         this.class2.addEventListener("click", this.changeClass.bind(this));
 
-        this.chosenClassTyp = this.class1;
-        this.chosenClassTyp.classList.add("chosen");
-        localStorage.setItem("classTyp", this.chosenClassTyp.id);
-
         ////Right
         this.minusButton = document.getElementById("minus");
         this.ticketNumber = document.getElementById("ticketNr");
@@ -48,8 +40,6 @@ class payment {
 
         this.minusButton.addEventListener("click", this.changeAmount.bind(this));
         this.plusButton.addEventListener("click", this.changeAmount.bind(this));
-
-        localStorage.setItem("amount", this.ticketNumber.innerText);
 
         //Right
         this.price = document.getElementById("price");
@@ -64,6 +54,21 @@ class payment {
 
         this.setTimer();
 
+        /////Changeg the Buttons tom 
+        if (localStorage.getItem("classTyp") != null) {
+            document.getElementById(localStorage.getItem("taxTyp")).click();
+        }else{
+            this.fullPrice.click();
+        }
+        if (localStorage.getItem("classTyp") != null) {
+            document.getElementById(localStorage.getItem("classTyp")).click();
+        }else{
+            this.class1.click();
+        }
+        if (localStorage.getItem("amount") != null) {
+            this.ticketNumber.innerText = localStorage.getItem("amount");
+        }
+
         this.caculatePrice();
     }
     //Left
@@ -74,7 +79,9 @@ class payment {
     //Middle
     ///Middle Top
     changeTax(event) {
-        this.chosenTaxTyp.classList.remove("chosen");
+        if(this.chosenTaxTyp){
+            this.chosenTaxTyp.classList.remove("chosen");
+        }
         this.chosenTaxTyp = document.getElementById(event.currentTarget.id);
         this.chosenTaxTyp.classList.add("chosen");
         localStorage.setItem("taxTyp", event.currentTarget.id);
@@ -84,7 +91,9 @@ class payment {
     ///Middle Bottom
     ////Left
     changeClass(event) {
-        this.chosenClassTyp.classList.remove("chosen");
+        if(this.chosenClassTyp){
+            this.chosenClassTyp.classList.remove("chosen");
+        }
         this.chosenClassTyp = document.getElementById(event.currentTarget.id);
         this.chosenClassTyp.classList.add("chosen");
         localStorage.setItem("classTyp", event.currentTarget.id);
@@ -107,6 +116,8 @@ class payment {
 
     //Right
     caculatePrice(event) {
+        
+
         this.basePrice = 2.90;
         if (this.caculateDistance() > 3) {
             for(let i = 3; i < this.caculateDistance(); i++){
@@ -122,7 +133,7 @@ class payment {
         }
 
         this.resetTimer();
-        this.price.innerText = this.basePrice.toFixed(2) * localStorage.getItem("amount");
+        this.price.innerText = (this.basePrice * localStorage.getItem("amount")).toFixed(2);
     }
 
     caculatePayedPrice(event) {

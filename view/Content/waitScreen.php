@@ -5,9 +5,9 @@
 
         <div class="top">
             <div class="topInfo">
-                <img src="../../View/Styles/Image/Logo (Weiss).png" alt="Logo von CSb">
+                <img src="../../View/Styles/Image/Logo (Weiss).png" alt="Logo von Csb">
                 
-                <p>00.00.0000</p>
+                <p id="currentTime">00.00.0000</p>
             </div>
 
             <div class="topMessage">

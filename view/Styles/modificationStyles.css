@@ -32,7 +32,7 @@ button{
 .routeImage{
     margin-top: 3%;
     width: 50%;
-    background-image: url("Image/Linie.pngg"), url("Image/Linie.pngg"), url("Image/Linie.png");
+    background-image: url("Image/Linie.png"), url("Image/Linie.png"), url("Image/Linie.png");
     background-size: 100%;
     background-repeat: no-repeat;
 }

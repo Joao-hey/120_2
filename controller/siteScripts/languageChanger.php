@@ -1,5 +1,7 @@
 <?php
 
+require_once("../../Controller/siteScripts/localisation/" . $languageCode . ".php");
+
 function _e($string)
 {
     global $language;

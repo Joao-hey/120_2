@@ -1,7 +1,5 @@
 class modification {
 
-
-
     static initialize() {
         modification.instance = new modification();
     }
@@ -13,12 +11,14 @@ class modification {
         this.stationFromButtons = document.getElementById("stationFromButtons");
         this.stationToButtons = document.getElementById("stationToButtons");
 
+
         //Defines all elements on the Right div element
         this.oneWay = document.getElementById("oneWay");
         this.twoWay = document.getElementById("twoWay");
         this.multiWay = document.getElementById("multiWay");
         this.continue = document.getElementById("continue");
         this.ErrorMessage = document.getElementById("Error");
+
 
         //binds functiones to the Left Side defined Elements functiones to the 
         this.addStation();
@@ -32,12 +32,26 @@ class modification {
         //defines needed Variabels
         this.chosenTicketTyp = this.oneWay;
         this.chosenTicketTyp.classList.add("chosen");
-        localStorage.setItem("ticketType", "oneWay");
 
         //timeout Variabels
         this.blur = document.getElementById("blur");
         this.alert = document.getElementById("alert");
         this.alertButton = document.getElementById("alertButton");
+
+        
+        if (localStorage.getItem("chosenStationFrom") != null) {
+            document.getElementById(localStorage.getItem("chosenStationFrom") + "From").click();
+        }
+
+        if (localStorage.getItem("chosenStationTo") != null) {
+            document.getElementById(localStorage.getItem("chosenStationTo") + "To").click();
+        }
+
+        if (localStorage.getItem("ticketType") != null) {
+            document.getElementById(localStorage.getItem("ticketType")).click();
+        }else{
+            this.oneWay.click();
+        }
 
         this.setTimer();
     }
@@ -46,7 +60,7 @@ class modification {
         this.chosenTicketTyp.classList.remove("chosen");
         this.chosenTicketTyp = document.getElementById(event.currentTarget.id);
         this.chosenTicketTyp.classList.add("chosen");
-        
+
         this.resetTimer();
         localStorage.setItem("ticketType", event.currentTarget.id);
     }
@@ -93,9 +107,9 @@ class modification {
             entryButton.id = entryButton.innerText + "To";
             this.listTo.appendChild(entryButton);
             entryButton.addEventListener("click", this.changeChosenStationTo.bind(this));
-
-
         }
+
+
     }
 
     changeChosenStationFrom(event) {
@@ -109,12 +123,11 @@ class modification {
         if (this.chosenStationFrom) {
             this.chosenStationFrom.classList.remove("chosen");
         }
-
         this.chosenStationFrom = document.getElementById(event.currentTarget.id);
         this.chosenStationFrom.classList.add("chosen");
         this.stationFromText.innerText = event.currentTarget.innerText;
         localStorage.setItem("chosenStationFrom", event.currentTarget.innerText);
-    
+
         this.resetTimer();
         this.seeIfContinue();
     }
@@ -135,7 +148,7 @@ class modification {
         this.chosenStationTo.classList.add("chosen");
         this.stationToText.innerText = event.currentTarget.innerText;
         localStorage.setItem("chosenStationTo", event.currentTarget.innerText);
-        
+
         this.resetTimer();
         this.seeIfContinue();
     }
@@ -173,8 +186,8 @@ class modification {
 
             this.siteRedirect = setTimeout(() => {
                 window.open("waitScreen.php", "_self");
-            }, 30000);
-        }, 30000);
+            }, 60000);
+        }, 60000);
     }
 
     resetTimer(event) {
@@ -186,6 +199,7 @@ class modification {
         clearTimeout(this.siteRedirect);
         this.setTimer();
     }
+
 
 }
 

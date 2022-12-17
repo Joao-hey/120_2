@@ -25,10 +25,10 @@
 
 
         <div class="taxType">
-            <p>Halbtax/Vollpreis Wahl: </p>
+            <p>Halb tax/Vollpreis Wahl: </p>
             <div>
                 <button id="fullPrice">Vollpreis</button>
-                <button id="halfPrice">Halbtax</button>
+                <button id="halfPrice">Halb tax</button>
             </div>
         </div>
 

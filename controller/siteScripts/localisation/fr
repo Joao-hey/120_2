@@ -1,6 +1,0 @@
-<?php
-
-$language = array(
-    "Abbrechen" => "Abbrechen123",
-    "" => ""
-);

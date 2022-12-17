@@ -19,9 +19,9 @@ class endSite {
 
     seeRemainingMoney(event){
         if(parseInt(localStorage.getItem("remainingMoney")) > 0){
-            
             this.restMoneyMessage.style.display = "";
         }
+        localStorage.clear();
     }
 }
 
