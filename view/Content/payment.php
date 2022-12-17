@@ -4,37 +4,55 @@
     <div class="left">
 
         <div class="stationFromText">
-            <label for="from">Von:</label>
+            <label for="from"> 
+                    <?php __("Von")?>:
+            </label>
             <p id="from"></p>
         </div>
 
         <div class="stationToText">
-            <label for="to">Zu:</label>
+            <label for="to">
+                    <?php __("Zu")?>:
+            </label>
             <p id="to"></p>
         </div>
 
         <div class="stationToText">
-            <label for="ticketTyp">Tickettyp:</label>
+            <label for="ticketTyp">
+                    <?php __("Tickettyp")?>:
+            </label>
             <p id="ticketTyp"></p>
         </div>
 
-        <button id="changeStation">Ändern</button>
+        <button id="changeStation">
+                    <?php __("Ändern")?>
+            
+        </button>
     </div>
 
     <div class="middle">
 
 
         <div class="taxType">
-            <p>Halb tax/Vollpreis Wahl: </p>
+            <p>
+                    <?php __("Halb tax/Vollpreis Wahl")?>
+            </p>
             <div>
-                <button id="fullPrice">Vollpreis</button>
-                <button id="halfPrice">Halb tax</button>
+                <button id="fullPrice">
+                    <?php __("Vollpreis")?>
+                    
+                </button>
+                <button id="halfPrice">
+                    <?php __("Halb tax")?>
+                </button>
             </div>
         </div>
 
         <div class="classAndNr">
             <div class="class">
-                <p>Klasse: </p>
+                <p>
+                    <?php __("Klasse")?>:
+                </p>
                 <div>
                     <button id="class1">1</button>
                     <button id="class2">2</button>
@@ -42,7 +60,9 @@
             </div>
 
             <div class="number">
-                <p>Anzahl: </p>
+                <p>
+                    <?php __("Anzahl")?>:
+                </p>
                 <div>
                     <button id="minus">-</button>
                     <p id="ticketNr">1</p>
@@ -53,15 +73,21 @@
     </div>
 
     <div class="right">
-        <p>Preis</p>
+        <p>
+                    <?php __("Preis")?>:
+        </p>
         <div class="price">
             <div>
-                <label for="price">Preis</label>
+                <label for="price">
+                    <?php __("Preis")?>:
+                </label>
                 <p id="price">0</p>
             </div>
 
             <div>
-                <label for="payed">Bezahlt</label>
+                <label for="payed">
+                    <?php __("Bezahlt")?>:
+                </label>
                 <p id="payed">0</p>
             </div>
         </div>

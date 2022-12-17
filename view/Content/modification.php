@@ -1,17 +1,19 @@
 <link rel="stylesheet" href="../../View/Styles/modificationStyles.css">
 
 
-        
+
 
 <div class="body">
     <div class="left">
-        
-    
+
+
         <div class="stationFrom">
-            
-    
+
+
             <div class="stationFromText">
-                <label for="From">Von: </label>
+                <label for="From">
+                    <?php __("Von")?>:
+                </label>
                 <p id="From"> </p>
             </div>
 
@@ -26,12 +28,14 @@
 
         <div class="stationTo">
             <div class="stationToText">
-                <label for="To">Zu: </label>
+                <label for="To">
+                    <?php __("Zu")?>:
+                </label>
                 <p id="To"> </p>
             </div>
 
             <div id="stationToButtons" class="stationToButtons">
-                
+
             </div>
         </div>
     </div>
@@ -39,23 +43,30 @@
     <div class="right">
 
         <div class="ticketType">
-            <p>Ticket Art</p>
+            <p>
+                <?php __("Ticket Art")?>
+            </p>
+
             <button id="oneWay">
-                Einzelbillet
+                <?php __("Einzelbillet")?>
             </button>
 
             <button id="twoWay">
-                Retourbillet
+                <?php __("Retourbillet")?>
             </button>
 
             <button id="multiWay">
-                Mehr-fahrtenkarte
-            </button>
+                <?php __("Mehrfahrtenkarte")?>
+            </button> 
         </div>
+        
         <button id="continue" class="continue">
-            Weiter
+                <?php __("Weiter")?>
         </button>
-        <p id="Error" class="ErrorHidden">Bitte wählen Sie eine 'Von' und 'Zu' Station</p>
+
+        <p id="Error" class="ErrorHidden">
+                <?php __("Bitte wählen Sie eine 'Von' und 'Zu' Station")?>
+        </p>
     </div>
 </div>
 

@@ -5,7 +5,7 @@
         <button id="cancel">
             <?php
             __("Abbrechen")
-            ?>
+                ?>
         </button>
     </div>
 
@@ -33,8 +33,16 @@
     </div>
 </button>
 <div id="alert" class="alert">
-    <p>Inaktivität erkannt </p>
-    <p>Drücken Sie den Bildschirm um weiterzuführen</p>
+    <p>
+        <?php
+    __("Inaktivität erkannt ")
+        ?>
+    </p>
+    <p>
+        <?php
+    __("Drücken Sie den Bildschirm um weiterzuführen")
+        ?>
+    </p>
 </div>
 
 
