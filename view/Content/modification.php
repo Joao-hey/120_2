@@ -11,8 +11,8 @@
             
     
             <div class="stationFromText">
-                <label for="From">From</label>
-                <p id="From"></p>
+                <label for="From">Von: </label>
+                <p id="From"> </p>
             </div>
 
             <div id="stationFromButtons" class="stationFromButtons">
@@ -26,8 +26,8 @@
 
         <div class="stationTo">
             <div class="stationToText">
-                <label for="To">To</label>
-                <p id="To"></p>
+                <label for="To">Zu: </label>
+                <p id="To"> </p>
             </div>
 
             <div id="stationToButtons" class="stationToButtons">
@@ -49,7 +49,7 @@
             </button>
 
             <button id="multiWay">
-                Mehrfahrtenkarte
+                Mehr-fahrtenkarte
             </button>
         </div>
         <button id="continue" class="continue">

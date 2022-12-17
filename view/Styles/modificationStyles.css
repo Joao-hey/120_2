@@ -8,9 +8,9 @@
 }
 
 button{
-    width: 6em;
+    width: 90%;
     height: 2.3em;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 .left, .right{
@@ -22,22 +22,25 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 60%;
+    width: 75%;
 }
 
 .stationFrom, .stationTo{
-    width: 35%;
+    width: 25%;
 }
 
 .routeImage{
-    width: 30%;
+    margin-top: 3%;
+    width: 50%;
+    background-image: url("Image/Linie.pngg"), url("Image/Linie.pngg"), url("Image/Linie.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .stationFromText, .stationToText{
     display: flex;
     flex-direction: row;
-    margin-top: 0.6em;
-    white-space: nowrap;
+    height: 15%;
 }
 
 
@@ -46,9 +49,8 @@ button{
 }
 
 .stationFromButtons, .stationToButtons {
-    height: 79%;
+    height: 82%;
     overflow: scroll;
-    overflow-x: hidden;
 }
 
 .stationFromButtons button, .stationToButtons button{
@@ -57,7 +59,7 @@ button{
 
 
 .right{
-    width: 30%;
+    width: 20%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -65,8 +67,8 @@ button{
 
 
 .ticketType{
-    width: 60%;
-    height: 75%;
+    width: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,17 +77,19 @@ button{
     padding-bottom: 2%;
 }
 
+.ticketType button{
+    height: 20%;
+}
+
 .ErrorHidden{
     margin-top: 8%;
     display: none;
 }
 
-.Error{
-    margin-top: 8%;
-}
 
 .continue{
-    margin: 10% 0% 0% 35%;
+    margin: 5% 0%;
+    height: 15%;
     background-color: var(--yellow);
     border-radius: 15px;
 }

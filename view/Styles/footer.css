@@ -50,27 +50,36 @@ footer {
     height: 14%;
 }
 
+footer button {
+    background-color: var(--yellow);
+    height: 2.3em;
+    font-size: 0.9em;
+}
 
 .leftFooterButton {
     margin-left: 2%;
-}
-
-.rightFooterButton {
-    margin-right: 2%;
-}
-
-footer button {
-    background-color: var(--yellow);
-    width: 6em;
-    height: 2.3em;
-    font-size: 1.1em;
+    width: 20%;
 }
 
 .leftFooterButton button {
     background-color: var(--red);
+    width: 100%;
 }
 
-footer button:active {
+.leftFooterButton button:active {
+    background-color: var(--darkRed);
+}
+
+.rightFooterButton{
+    width: 60%;
+}
+
+.rightFooterButton button {
+    background-color: var(--yellow);
+    width: 22%;
+}
+
+.rightFooterButton button:active {
     background-color: var(--darkYellow);
 }
 
@@ -78,7 +87,15 @@ footer button:active {
     background-color: var(--yellow);
 }
 
+.chosen:active {
+    background-color: var(--darkYellow);
+}
+
 button {
     border: var(--gray) 1px solid;
     border-radius: 3px;
+}
+
+button:active {
+    background-color: var(--darkYellow);
 }

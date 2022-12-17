@@ -57,14 +57,14 @@ class payment {
         
         localStorage.setItem("payed", 0);
 
-        this.caculatePrice();
-
         //timeout Variabels
         this.blur = document.getElementById("blur");
         this.alert = document.getElementById("alert");
         this.alertButton = document.getElementById("alertButton");
 
         this.setTimer();
+
+        this.caculatePrice();
     }
     //Left
     goToModification(event) {
@@ -165,12 +165,12 @@ class payment {
     
     //timeout function
     setTimer(event) {
-        console.log("sfesfsef");
         //reset of the site
         this.alertTimeout = setTimeout(() => {
+            this.blur.Style.display = "flex";
             this.blur.style.display = "flex";
-            this.alert.style.display = "flex";
-            this.alertButton.style.display = "flex";
+            this.alert.Style.display = "flex";
+            this.alertButton.Style.display = "flex";
 
             this.alert.addEventListener("click", this.resetTimer.bind(this));
 

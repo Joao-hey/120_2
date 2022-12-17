@@ -163,7 +163,6 @@ class modification {
 
     //timeout function
     setTimer(event) {
-        console.log("sfesfsef");
         //reset of the site
         this.alertTimeout = setTimeout(() => {
             this.blur.style.display = "flex";
