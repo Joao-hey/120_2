@@ -5,6 +5,9 @@ class modification {
     }
 
     constructor() {
+        //saves the Language
+        this.lang = document.documentElement.lang;
+
         //Defines all elements on the left div element
         this.stationFromText = document.getElementById("From");
         this.stationToText = document.getElementById("To");
@@ -38,7 +41,7 @@ class modification {
         this.alert = document.getElementById("alert");
         this.alertButton = document.getElementById("alertButton");
 
-        
+
         if (localStorage.getItem("chosenStationFrom") != null) {
             document.getElementById(localStorage.getItem("chosenStationFrom") + "From").click();
         }
@@ -49,11 +52,16 @@ class modification {
 
         if (localStorage.getItem("ticketType") != null) {
             document.getElementById(localStorage.getItem("ticketType")).click();
-        }else{
+        } else {
             this.oneWay.click();
         }
 
         this.setTimer();
+    }
+
+
+    __(string) {
+        return $langage[string];
     }
 
     changeTicketTyp(event) {
@@ -108,8 +116,6 @@ class modification {
             this.listTo.appendChild(entryButton);
             entryButton.addEventListener("click", this.changeChosenStationTo.bind(this));
         }
-
-
     }
 
     changeChosenStationFrom(event) {
@@ -165,7 +171,7 @@ class modification {
     seeIfContinueButton(event) {
         if (this.chosenStationTo && this.chosenStationFrom) {
             this.continue.disabled = false;
-            window.open("payment.php", "_self");
+            window.open("payment.php?language=" + this.lang, "_self");
         } else {
             this.continue.disabled = true;
             this.ErrorMessage.classList.remove("ErrorHidden");
@@ -204,3 +210,5 @@ class modification {
 }
 
 window.addEventListener("load", modification.initialize);
+
+

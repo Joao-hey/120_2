@@ -5,6 +5,9 @@ class payment {
     }
 
     constructor() {
+        //saves the Language
+        this.lang = document.documentElement.lang;
+
         //Left
         this.stationFrom = document.getElementById("from");
         this.stationTo = document.getElementById("to");
@@ -15,7 +18,14 @@ class payment {
 
         this.stationFrom.innerText = localStorage.getItem("chosenStationFrom");
         this.stationTo.innerText = localStorage.getItem("chosenStationTo");
-        this.ticketTyp.innerText = localStorage.getItem("ticketType");
+        switch (localStorage.getItem("ticketType")) {
+            case "oneWay":
+                this.ticketTyp.innerText = this.__("Einzelbillet");
+            case "twoWay":
+                this.ticketTyp.innerText = this.__("Retourbillet");
+            case "multiWay":
+                this.ticketTyp.innerText =  this.__("Mehrfahrtenkarte");
+        }
 
         //Middle
         ///Middle Top
@@ -44,7 +54,7 @@ class payment {
         //Right
         this.price = document.getElementById("price");
         this.payed = document.getElementById("payed");
-        
+
         localStorage.setItem("payed", 0);
 
         //timeout Variabels
@@ -57,29 +67,35 @@ class payment {
         /////Changeg the Buttons tom 
         if (localStorage.getItem("classTyp") != null) {
             document.getElementById(localStorage.getItem("taxTyp")).click();
-        }else{
+        } else {
             this.fullPrice.click();
         }
         if (localStorage.getItem("classTyp") != null) {
             document.getElementById(localStorage.getItem("classTyp")).click();
-        }else{
+        } else {
             this.class1.click();
         }
         if (localStorage.getItem("amount") != null) {
             this.ticketNumber.innerText = localStorage.getItem("amount");
         }
 
+
         this.caculatePrice();
     }
+
+    __(string){
+        return language[string];
+    }
+   
     //Left
     goToModification(event) {
-        window.open("modification.php", "_self");
+        window.open("modification.php?language=" + this.lang, "_self");
     }
 
     //Middle
     ///Middle Top
     changeTax(event) {
-        if(this.chosenTaxTyp){
+        if (this.chosenTaxTyp) {
             this.chosenTaxTyp.classList.remove("chosen");
         }
         this.chosenTaxTyp = document.getElementById(event.currentTarget.id);
@@ -91,7 +107,7 @@ class payment {
     ///Middle Bottom
     ////Left
     changeClass(event) {
-        if(this.chosenClassTyp){
+        if (this.chosenClassTyp) {
             this.chosenClassTyp.classList.remove("chosen");
         }
         this.chosenClassTyp = document.getElementById(event.currentTarget.id);
@@ -116,19 +132,19 @@ class payment {
 
     //Right
     caculatePrice(event) {
-        
+
 
         this.basePrice = 2.90;
         if (this.caculateDistance() > 3) {
-            for(let i = 3; i < this.caculateDistance(); i++){
+            for (let i = 3; i < this.caculateDistance(); i++) {
                 this.basePrice += 0.90;
             }
         }
-        if(localStorage.getItem("taxTyp") == "fullPrice"){
+        if (localStorage.getItem("taxTyp") == "fullPrice") {
             this.basePrice = this.basePrice * 2;
         }
 
-        if(localStorage.getItem("classTyp") == "class1"){
+        if (localStorage.getItem("classTyp") == "class1") {
             this.basePrice = this.basePrice * 2;
         }
 
@@ -140,7 +156,7 @@ class payment {
         this.payed.innerText = localStorage.getItem("payed");
         console.log(localStorage.getItem("payed"));
 
-        if(parseInt(this.payed.innerText) >= parseInt(this.price.innerText)){
+        if (parseInt(this.payed.innerText) >= parseInt(this.price.innerText)) {
             localStorage.setItem("remainingMoney", parseInt(this.payed.innerText) - parseInt(this.price.innerText))
             window.open("endSite.php", "_self");
         }
@@ -160,20 +176,20 @@ class payment {
         this.minusButton.disabled = true;
         this.plusButton.disabled = true;
 
-        
+
         this.resetTimer();
         this.caculatePayedPrice();
     }
 
-    caculateDistance(event){
+    caculateDistance(event) {
         this.routeStart = localStorage.getItem(this.stationFrom.innerText);
         this.routeEnd = localStorage.getItem(this.stationTo.innerText);
-        
-        
+
+
         return this.routDistance = this.routeEnd - this.routeStart;
     }
 
-    
+
     //timeout function
     setTimer(event) {
         //reset of the site

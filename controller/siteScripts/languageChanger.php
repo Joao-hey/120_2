@@ -17,3 +17,6 @@ function __($string)
 {
     echo _e($string);
 }
+
+echo "<script>var language = " . json_encode($language) . ";    
+</script>";

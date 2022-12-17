@@ -19,7 +19,7 @@
 
         <div class="stationToText">
             <label for="ticketTyp">
-                    <?php __("Tickettyp")?>:
+                    <?php __("Ticket Art")?>:
             </label>
             <p id="ticketTyp"></p>
         </div>

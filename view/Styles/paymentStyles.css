@@ -18,7 +18,7 @@
 }
 
 .left{
-    height: 48%;
+    height: 55%;
     flex-direction: row;
     text-align: center;
     white-space: nowrap;
@@ -50,7 +50,7 @@
 }
 
 .ticketTyp, .taxType, .classAndNr{
-    height: 30%;
+    height: 35%;
 }
 
 .ticketTyp div{
@@ -60,6 +60,11 @@
 
 .taxType div{
     margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.number div{
     display: flex;
     justify-content: space-evenly;
 }
@@ -79,11 +84,23 @@
 }
 
 .class div, .number div{
-    margin-top: 8%;
+    
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
+.number div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.class  p, .number  p{
+    height: 1.5em;
+}
+
 .number div p{
     text-align: center;
     width: 1em;
