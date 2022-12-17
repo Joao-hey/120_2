@@ -18,13 +18,19 @@ class payment {
 
         this.stationFrom.innerText = localStorage.getItem("chosenStationFrom");
         this.stationTo.innerText = localStorage.getItem("chosenStationTo");
+
         switch (localStorage.getItem("ticketType")) {
             case "oneWay":
                 this.ticketTyp.innerText = this.__("Einzelbillet");
+                break;
             case "twoWay":
                 this.ticketTyp.innerText = this.__("Retourbillet");
+                break;
             case "multiWay":
                 this.ticketTyp.innerText =  this.__("Mehrfahrtenkarte");
+                break;
+            default:
+                break;
         }
 
         //Middle
@@ -77,10 +83,12 @@ class payment {
         }
         if (localStorage.getItem("amount") != null) {
             this.ticketNumber.innerText = localStorage.getItem("amount");
+        }else {
+            this.minusButton.click();
         }
 
-
         this.caculatePrice();
+
     }
 
     __(string){
@@ -156,8 +164,12 @@ class payment {
         this.payed.innerText = localStorage.getItem("payed");
         console.log(localStorage.getItem("payed"));
 
-        if (parseInt(this.payed.innerText) >= parseInt(this.price.innerText)) {
+        if (parseFloat(this.payed.innerText) >= parseFloat(this.price.innerText)) {
             localStorage.setItem("remainingMoney", parseInt(this.payed.innerText) - parseInt(this.price.innerText))
+            for(var i = 0; i < parseInt(localStorage.getItem("amount")); i++){
+                localStorage.setItem("price", this.price.innerText);
+                window.open("ticket.php?language=" + this.lang, "_blank");
+            }
             window.open("endSite.php", "_self");
         }
     }
@@ -184,7 +196,6 @@ class payment {
     caculateDistance(event) {
         this.routeStart = localStorage.getItem(this.stationFrom.innerText);
         this.routeEnd = localStorage.getItem(this.stationTo.innerText);
-
 
         return this.routDistance = this.routeEnd - this.routeStart;
     }

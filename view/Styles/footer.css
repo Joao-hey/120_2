@@ -90,7 +90,7 @@ footer button {
 
 button {
     border: var(--gray) 1px solid;
-    border-radius: 3px;
+    border-radius: 15px;
 }
 
 button:active {

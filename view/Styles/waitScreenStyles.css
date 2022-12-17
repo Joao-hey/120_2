@@ -17,6 +17,7 @@ button, .linkbody{
 .top{
     height: 30%;
     background-color: var(--blue);
+    color: var(--white);
 }
 
 .topInfo{

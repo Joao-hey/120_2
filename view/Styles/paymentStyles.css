@@ -24,6 +24,11 @@
     white-space: nowrap;
 }
 
+.left .stationText p{
+    border-bottom: var(--gray) 1px solid;
+    padding: 3%;
+}
+
 .left p{
     margin-bottom: 3%;
 }
@@ -42,6 +47,9 @@
 }
 
 .middle{
+    border: var(--gray) 1px solid;
+    border-radius: 5px;
+    padding: 1%;
     width: 45%; 
     height: 55%;
     display: flex;
@@ -100,6 +108,10 @@
 .class  p, .number  p{
     height: 1.5em;
 }
+.class  button{
+    border-radius: 15px;
+}
+
 
 .number div p{
     text-align: center;
@@ -112,8 +124,11 @@
 }
 
 .right{
+    border-radius: 5px;
     width: 20%;
     height: 30%;
+    border: var(--gray) 1px solid;
+    padding: 0.5%;
 }
 
 .price{

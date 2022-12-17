@@ -1,0 +1,6 @@
+.oneWay, .twoWay, .multiWay{
+    border: var(--red) 1px solid;
+    width: 25%;
+    height: 50%;
+}
+

@@ -14,6 +14,7 @@ class endSite {
     }
 
     stopEndSite(event){
+        localStorage.clear();
         window.open("modification.php", "_self");
     }
 
@@ -21,7 +22,6 @@ class endSite {
         if(parseInt(localStorage.getItem("remainingMoney")) > 0){
             this.restMoneyMessage.style.display = "";
         }
-        localStorage.clear();
     }
 }
 

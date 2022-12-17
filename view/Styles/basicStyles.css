@@ -1,4 +1,5 @@
 *{
+    --white: #FFFFFF;
     --lightPink: #FFF0ED;
     --gray: #7F7F7F;
     --darkGray: #666666;
@@ -12,7 +13,6 @@
     --text: 1.35em; 
 
     border: black 0cm solid;
-    border: var(--red) solid 1px;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
