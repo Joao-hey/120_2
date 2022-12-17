@@ -10,7 +10,7 @@ class waitScreen {
     }
 
     stopWaitScreen(event){
-        window.open("modification.php", "_self");
+        window.open("modification.php?language=de", "_self");
     }
 }
 

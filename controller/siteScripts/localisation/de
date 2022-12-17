@@ -1,0 +1,28 @@
+<?php
+
+$language = array(
+    "Abbrechen" => "Abbrechen123",
+    "Von" => "Abbrechen123",
+    "Zu" => "Abbrechen123",
+    "Ticket Art" => "Abbrechen123",
+    "Einzelbillet" => "Abbrechen123",
+    "Retourbillet" => "Abbrechen123",
+    "Mehr-fahrtenkarten" => "Abbrechen123",
+    "Weiter" => "Abbrechen123",
+    "Inaktivität erkannt " => "aewaewe",
+    "Drücken Sie den Bilscchrim um weiterzuführen" => "Abbrechen123",
+    "Bitte wählen Sie eine Von und Zu Station" => "aewaewe",
+
+    "Halbtax/Vollpreis Wahl: " => "Abbrechen123",
+    "Vollpreis" => "Abbrechen123",
+    "Halbtax" => "Abbrechen123",
+    "Klasse: " => "Abbrechen123",
+    "Anzahl: " => "Abbrechen123",
+    "Preis" => "Abbrechen123",
+    "Bezahlt" => "Abbrechen123",
+
+    "Vielen Dank für Ihren Einkauf" => "Abbrechen123",
+    "Bitte Entnehmen Sie ihr Geld" => "Abbrechen123",
+    "Ticket werden Ausgegeben" => "Abbrechen123",
+
+);

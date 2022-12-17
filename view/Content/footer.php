@@ -3,7 +3,9 @@
 <footer>
     <div class="leftFooterButton">
         <button id="cancel">
-            Abbrechen
+            <?php
+            __("Abbrechen")
+            ?>
         </button>
     </div>
 

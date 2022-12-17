@@ -5,9 +5,15 @@ class Pagebuilder
 
     public static function pagebuild($title = "", $url = "")
     {
-    echo"
+        echo "
+    
     <!DOCTYPE html>
-    <html lang=\"en\">
+    <html lang=";
+
+        require_once "../../controller/siteScripts/languageSeter.php";
+        require_once "../../controller/siteScripts/languageChanger.php";
+        echo $language;
+        echo ">
     <head>
         <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
@@ -17,11 +23,11 @@ class Pagebuilder
     </head>
     <body>
         ";
-        
+
         require_once "Content/" . $url . ".php";
-        
+
         echo
-        "
+            "
     </body>
     
     </html>
